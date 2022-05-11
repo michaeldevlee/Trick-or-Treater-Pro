@@ -1,0 +1,1060 @@
+[gd_scene load_steps=44 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://AudioPlayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Spot.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Fonts/Baby Halloween.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://UI.gd" type="Script" id=5]
+[ext_resource path="res://Background Assets/Background.png" type="Texture" id=6]
+[ext_resource path="res://Background Assets/Fences.png" type="Texture" id=7]
+[ext_resource path="res://Background Assets/Sky.png" type="Texture" id=8]
+[ext_resource path="res://Background Assets/Cloud 1.png" type="Texture" id=9]
+[ext_resource path="res://Background Assets/Cloud 2.png" type="Texture" id=10]
+[ext_resource path="res://Shining Particle.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Background.gd" type="Script" id=12]
+[ext_resource path="res://UI/Candy Bags/Candy Bags Board/Candy Bag Board.png" type="Texture" id=13]
+[ext_resource path="res://UI/Candy Bags/Candies/Candy Corn.png" type="Texture" id=14]
+[ext_resource path="res://UI/Candy Bags/Candies/Bag Open.png" type="Texture" id=15]
+[ext_resource path="res://UI/Candy Bags/Candies/Skull Candy Bag.png" type="Texture" id=16]
+[ext_resource path="res://UI/Candy Bags/Candies/Heart Pop.png" type="Texture" id=17]
+[ext_resource path="res://UI/Candy Bags/Candies/ChocoBar Bag.png" type="Texture" id=18]
+[ext_resource path="res://UI/Candy Bags/Candies/Bone Pixie Dust Bag.png" type="Texture" id=19]
+[ext_resource path="res://UI/Candy Bags/Candies/Web Cookie Bag.png" type="Texture" id=20]
+[ext_resource path="res://UI/Title Screen/Exit Button.png" type="Texture" id=21]
+[ext_resource path="res://UI/Title Screen/Play Button.png" type="Texture" id=22]
+[ext_resource path="res://Title Screen.gd" type="Script" id=23]
+[ext_resource path="res://UI/Title Screen/Game Title BG.png" type="Texture" id=24]
+[ext_resource path="res://UI/Main UI/Clock.png" type="Texture" id=25]
+[ext_resource path="res://UI/Main UI/Complaints BG.png" type="Texture" id=26]
+[ext_resource path="res://UI/Main UI/Score BG.png" type="Texture" id=27]
+[ext_resource path="res://Background Assets/Buildings.png" type="Texture" id=28]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Move Clouds"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cloud:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1266.7, 145.562 ), Vector2( 2461.3, 145.562 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Cloud2:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -743.659, 322.151 ), Vector2( 1452.34, 322.151 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Cloud3:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1689.41, 304.161 ), Vector2( -1559.21, 304.161 ), Vector2( 1296.34, 304.161 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Cloud6:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1495.52, 172.008 ), Vector2( 2103.86, 172.008 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Cloud5:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -720.309, 152.29 ), Vector2( 1250.73, 152.29 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "MoveClouds 2"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cloud5:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -3200.02, 156.78 ), Vector2( 2380.57, 156.78 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 10, 100 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 10, 48 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 32
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 80
+outline_size = 5
+outline_color = Color( 0.129412, 0.839216, 0.0705882, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 64
+outline_size = 4
+outline_color = Color( 0.129412, 0.839216, 0.0705882, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 43
+outline_size = 5
+outline_color = Color( 0.129412, 0.839216, 0.0705882, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 30
+outline_size = 5
+outline_color = Color( 0.129412, 0.839216, 0.0705882, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=14]
+outline_size = 4
+outline_color = Color( 0.0901961, 0.705882, 0.172549, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=15]
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("ScreenTransition:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ true ],
+"method": "toggleTitleScreen"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "initiateMusic"
+} ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("..")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "initiateAmbienceSFX"
+} ]
+}
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 1 )
+pointsToWin = 80000
+pointsToWinAwesomely = 100000
+
+[node name="Background" type="Node2D" parent="."]
+script = ExtResource( 12 )
+
+[node name="Sky" type="TextureRect" parent="Background"]
+margin_right = 1280.0
+margin_bottom = 720.0
+mouse_filter = 2
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Buildings" type="TextureRect" parent="Background"]
+margin_left = 31.2421
+margin_top = 248.851
+margin_right = 1281.24
+margin_bottom = 533.851
+mouse_filter = 2
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cloud" type="TextureRect" parent="Background"]
+margin_left = -1266.7
+margin_top = 145.562
+margin_right = -346.694
+margin_bottom = 353.562
+mouse_filter = 2
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cloud2" type="TextureRect" parent="Background"]
+margin_left = -743.659
+margin_top = 322.151
+margin_right = 176.485
+margin_bottom = 530.151
+mouse_filter = 2
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cloud3" type="TextureRect" parent="Background"]
+margin_left = -1689.41
+margin_top = 304.161
+margin_right = -769.401
+margin_bottom = 512.161
+mouse_filter = 2
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cloud5" type="TextureRect" parent="Background"]
+margin_left = -720.309
+margin_top = 152.29
+margin_right = 199.76
+margin_bottom = 360.29
+mouse_filter = 2
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cloud6" type="TextureRect" parent="Background"]
+margin_left = 1495.52
+margin_top = 172.008
+margin_right = 2414.6
+margin_bottom = 380.008
+mouse_filter = 2
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fences" type="TextureRect" parent="Background"]
+margin_left = 66.5956
+margin_top = 346.059
+margin_right = 1272.6
+margin_bottom = 575.059
+mouse_filter = 2
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="Background"]
+margin_right = 1280.0
+margin_bottom = 720.0
+mouse_filter = 2
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Shining Particle" parent="Background" instance=ExtResource( 11 )]
+self_modulate = Color( 1, 1, 1, 0.52549 )
+position = Vector2( 820.869, 160.569 )
+scale = Vector2( 0.748097, 0.748097 )
+
+[node name="Shining Particle4" parent="Background" instance=ExtResource( 11 )]
+position = Vector2( 459.605, 167.141 )
+
+[node name="Shining Particle5" parent="Background" instance=ExtResource( 11 )]
+self_modulate = Color( 1, 1, 1, 0.505882 )
+position = Vector2( 1133.59, 330.994 )
+scale = Vector2( 0.559019, 0.559019 )
+
+[node name="Shining Particle6" parent="Background" instance=ExtResource( 11 )]
+self_modulate = Color( 1, 1, 1, 0.545098 )
+position = Vector2( 887.41, 331.437 )
+
+[node name="Shining Particle2" parent="Background" instance=ExtResource( 11 )]
+position = Vector2( 606.704, 259.93 )
+scale = Vector2( 0.415217, 0.415217 )
+
+[node name="Shining Particle3" parent="Background" instance=ExtResource( 11 )]
+position = Vector2( 328.116, 322.171 )
+scale = Vector2( 0.37522, 0.37522 )
+
+[node name="CloudSetAnim1" type="AnimationPlayer" parent="Background"]
+playback_speed = 0.1
+"anims/Move Clouds" = SubResource( 1 )
+"anims/MoveClouds 2" = SubResource( 2 )
+
+[node name="Candy Bags" type="Node2D" parent="Background"]
+
+[node name="CandyBags" type="TextureRect" parent="Background/Candy Bags"]
+margin_right = 1280.0
+margin_bottom = 72.0
+mouse_filter = 2
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/Candy Bags"]
+margin_top = 4.0
+margin_right = 1280.0
+margin_bottom = 68.0
+grow_vertical = 2
+mouse_filter = 2
+custom_constants/separation = 80
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Candy Corn Bag" type="TextureButton" parent="Background/Candy Bags/HBoxContainer"]
+margin_left = 248.0
+margin_right = 312.0
+margin_bottom = 64.0
+mouse_filter = 1
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Skull Candy Bag" type="TextureButton" parent="Background/Candy Bags/HBoxContainer"]
+margin_left = 392.0
+margin_right = 456.0
+margin_bottom = 64.0
+mouse_filter = 1
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Heart Pop Bag" type="TextureButton" parent="Background/Candy Bags/HBoxContainer"]
+margin_left = 536.0
+margin_right = 600.0
+margin_bottom = 64.0
+mouse_filter = 1
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChocoBar Bag" type="TextureButton" parent="Background/Candy Bags/HBoxContainer"]
+margin_left = 680.0
+margin_right = 744.0
+margin_bottom = 64.0
+mouse_filter = 1
+texture_normal = ExtResource( 18 )
+texture_pressed = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bone Pixie Dust Bag" type="TextureButton" parent="Background/Candy Bags/HBoxContainer"]
+margin_left = 824.0
+margin_right = 888.0
+margin_bottom = 64.0
+mouse_filter = 1
+texture_normal = ExtResource( 19 )
+texture_pressed = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Web Pie Bag" type="TextureButton" parent="Background/Candy Bags/HBoxContainer"]
+margin_left = 968.0
+margin_right = 1032.0
+margin_bottom = 64.0
+mouse_filter = 1
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Game Area" type="Node2D" parent="."]
+
+[node name="Focus Area" type="ColorRect" parent="Game Area"]
+visible = false
+margin_top = 72.0
+margin_right = 1280.0
+margin_bottom = 720.0
+mouse_filter = 2
+color = Color( 0.992157, 0.423529, 0.423529, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ground" type="ColorRect" parent="Game Area"]
+visible = false
+margin_top = 512.0
+margin_right = 1280.0
+margin_bottom = 720.0
+mouse_filter = 2
+color = Color( 0.211765, 0.372549, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sky" type="ColorRect" parent="Game Area"]
+visible = false
+margin_top = 72.0
+margin_right = 1280.0
+margin_bottom = 512.0
+mouse_filter = 2
+color = Color( 0.101961, 0.14902, 0.329412, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RemoveArea" type="Area2D" parent="Game Area" groups=[
+"Remove",
+]]
+position = Vector2( 1608, 546 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game Area/RemoveArea"]
+shape = SubResource( 3 )
+
+[node name="Background Placeholder" type="Node2D" parent="."]
+visible = false
+
+[node name="House3" type="ColorRect" parent="Background Placeholder"]
+margin_left = 48.0
+margin_top = 600.0
+margin_right = 212.0
+margin_bottom = 769.0
+rect_rotation = -60.0
+mouse_filter = 2
+color = Color( 0.929412, 0.929412, 0.929412, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="House" type="ColorRect" parent="Background Placeholder"]
+margin_left = 7.62939e-06
+margin_top = 257.0
+margin_right = 192.0
+margin_bottom = 681.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="House2" type="ColorRect" parent="Background Placeholder"]
+margin_left = 7.62939e-06
+margin_top = 256.0
+margin_right = 179.0
+margin_bottom = 453.0
+rect_rotation = -90.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="House5" type="ColorRect" parent="Background Placeholder"]
+margin_left = 277.0
+margin_top = 72.0
+margin_right = 746.0
+margin_bottom = 155.0
+rect_rotation = 90.0
+mouse_filter = 2
+color = Color( 0.901961, 0.901961, 0.901961, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Kid Spawn Area" type="Area2D" parent="."]
+position = Vector2( 1232, 760 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kid Spawn Area"]
+position = Vector2( -32, 48 )
+shape = SubResource( 4 )
+
+[node name="Kid Stop Areas" type="Node2D" parent="."]
+visible = false
+
+[node name="Spot" parent="Kid Stop Areas" instance=ExtResource( 3 )]
+position = Vector2( 369.297, 574.811 )
+
+[node name="Spot2" parent="Kid Stop Areas" instance=ExtResource( 3 )]
+position = Vector2( 586.054, 624 )
+
+[node name="Spot 3" parent="Kid Stop Areas" instance=ExtResource( 3 )]
+position = Vector2( 800.324, 558.702 )
+
+[node name="Spot 4" parent="Kid Stop Areas" instance=ExtResource( 3 )]
+position = Vector2( 987, 614 )
+
+[node name="Spot 5" parent="Kid Stop Areas" instance=ExtResource( 3 )]
+position = Vector2( 1176, 616 )
+
+[node name="Timers" type="Node2D" parent="."]
+
+[node name="Main Timer" type="Timer" parent="Timers"]
+
+[node name="KidSpawnerTimer" type="Timer" parent="Timers"]
+
+[node name="KidMover" type="Tween" parent="."]
+
+[node name="UI" type="Node2D" parent="."]
+position = Vector2( 984, 96 )
+script = ExtResource( 5 )
+complaintCountPath = NodePath("ColorRect/Complaint Count")
+complaintTextPath = NodePath("ColorRect/Complaint Text")
+scoreCountPath = NodePath("ColorRect2/Score Count")
+scoreTextPath = NodePath("ColorRect2/Score Text")
+
+[node name="ColorRect" type="TextureRect" parent="UI"]
+margin_left = 144.0
+margin_top = -88.0
+margin_right = 272.0
+margin_bottom = 40.0
+texture = ExtResource( 26 )
+
+[node name="Complaint Count" type="Label" parent="UI/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.05444
+margin_top = 52.4645
+margin_right = 2.05444
+margin_bottom = -3.53554
+custom_fonts/font = SubResource( 5 )
+text = "5"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Complaint Text" type="Label" parent="UI/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.24268
+margin_top = 4.35355
+margin_right = 2.24268
+margin_bottom = -67.6464
+custom_fonts/font = SubResource( 6 )
+text = "Complaint Tolerance"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="TextureRect" parent="UI"]
+margin_left = -938.0
+margin_top = -88.0
+margin_right = -810.0
+margin_bottom = -6.0
+texture = ExtResource( 25 )
+
+[node name="Time Left" type="Label" parent="UI/Time"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 18.0
+margin_top = 19.0
+margin_right = -25.0
+margin_bottom = -13.0
+custom_fonts/font = SubResource( 7 )
+text = "5"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="TextureRect" parent="UI"]
+margin_left = 144.0
+margin_top = 64.0
+margin_right = 272.0
+margin_bottom = 144.0
+texture = ExtResource( 27 )
+
+[node name="Score Text" type="Label" parent="UI/ColorRect2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -0.471939
+margin_bottom = -40.4719
+custom_fonts/font = SubResource( 8 )
+text = "Score"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score Count" type="Label" parent="UI/ColorRect2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 40.0
+custom_fonts/font = SubResource( 9 )
+text = "20000"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Game Over Screen" type="CanvasLayer" parent="."]
+pause_mode = 2
+
+[node name="Game Over Screen" type="Node2D" parent="Game Over Screen"]
+visible = false
+
+[node name="Game Over BG" type="TextureRect" parent="Game Over Screen/Game Over Screen"]
+margin_left = 303.134
+margin_top = 136.865
+margin_right = 974.134
+margin_bottom = 368.865
+texture = ExtResource( 24 )
+
+[node name="Game Over Text" type="Label" parent="Game Over Screen/Game Over Screen/Game Over BG"]
+margin_left = 3.29288
+margin_top = 28.1378
+margin_right = 634.292
+margin_bottom = 230.138
+custom_fonts/font = SubResource( 10 )
+text = "Too many complaints"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Restart Button" type="TextureButton" parent="Game Over Screen/Game Over Screen"]
+margin_left = 351.08
+margin_top = 392.0
+margin_right = 651.08
+margin_bottom = 592.0
+texture_normal = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play Button Text2" type="Label" parent="Game Over Screen/Game Over Screen/Restart Button"]
+margin_left = 86.5408
+margin_top = 93.1643
+margin_right = 241.541
+margin_bottom = 172.164
+custom_fonts/font = SubResource( 11 )
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Game Over Exit Button" type="TextureButton" parent="Game Over Screen/Game Over Screen"]
+margin_left = 651.891
+margin_top = 390.811
+margin_right = 951.891
+margin_bottom = 590.811
+texture_normal = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play Button Text3" type="Label" parent="Game Over Screen/Game Over Screen/Game Over Exit Button"]
+margin_left = 76.1097
+margin_top = 94.3535
+margin_right = 231.11
+margin_bottom = 173.354
+custom_fonts/font = SubResource( 11 )
+text = "Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Win Screen" type="CanvasLayer" parent="."]
+pause_mode = 2
+
+[node name="Win Screen" type="Node2D" parent="Win Screen"]
+visible = false
+
+[node name="Win Screen BG" type="TextureRect" parent="Win Screen/Win Screen"]
+margin_left = 323.55
+margin_top = 143.109
+margin_right = 994.55
+margin_bottom = 375.109
+texture = ExtResource( 24 )
+
+[node name="Win Text" type="Label" parent="Win Screen/Win Screen/Win Screen BG"]
+margin_left = 71.5952
+margin_top = 24.6389
+margin_right = 593.595
+margin_bottom = 226.639
+custom_fonts/font = SubResource( 12 )
+text = "you did it but you can give out more candy than that"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Win Restart Button" type="TextureButton" parent="Win Screen/Win Screen"]
+margin_left = 350.442
+margin_top = 392.0
+margin_right = 650.442
+margin_bottom = 592.0
+texture_normal = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Restart Text" type="Label" parent="Win Screen/Win Screen/Win Restart Button"]
+margin_left = 86.43
+margin_top = 93.1643
+margin_right = 241.43
+margin_bottom = 172.164
+custom_fonts/font = SubResource( 11 )
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Win Exit Button" type="TextureButton" parent="Win Screen/Win Screen"]
+margin_left = 652.442
+margin_top = 392.0
+margin_right = 952.442
+margin_bottom = 592.0
+texture_normal = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Win Exit Button" type="Label" parent="Win Screen/Win Screen/Win Exit Button"]
+margin_left = 75.5587
+margin_top = 93.1643
+margin_right = 230.558
+margin_bottom = 172.164
+custom_fonts/font = SubResource( 11 )
+text = "Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Win Screen2" type="CanvasLayer" parent="."]
+pause_mode = 2
+
+[node name="Win Screen" type="Node2D" parent="Win Screen2"]
+visible = false
+
+[node name="ColorRect2" type="TextureRect" parent="Win Screen2/Win Screen"]
+margin_left = 310.6
+margin_top = 151.241
+margin_right = 981.6
+margin_bottom = 383.241
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Win Text" type="Label" parent="Win Screen2/Win Screen/ColorRect2"]
+margin_left = 68.7125
+margin_top = 28.9482
+margin_right = 590.712
+margin_bottom = 230.948
+custom_fonts/font = SubResource( 12 )
+text = "i dub thee a trick or treater pro"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Awesome Win Restart Button" type="TextureButton" parent="Win Screen2/Win Screen"]
+margin_left = 350.442
+margin_top = 392.0
+margin_right = 650.442
+margin_bottom = 592.0
+texture_normal = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Restart Text" type="Label" parent="Win Screen2/Win Screen/Awesome Win Restart Button"]
+margin_left = 86.43
+margin_top = 93.1643
+margin_right = 241.43
+margin_bottom = 172.164
+custom_fonts/font = SubResource( 11 )
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Awesome Win Exit Button" type="TextureButton" parent="Win Screen2/Win Screen"]
+margin_left = 652.442
+margin_top = 392.0
+margin_right = 952.442
+margin_bottom = 592.0
+texture_normal = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Win Exit Button" type="Label" parent="Win Screen2/Win Screen/Awesome Win Exit Button"]
+margin_left = 75.5587
+margin_top = 93.1643
+margin_right = 230.558
+margin_bottom = 172.164
+custom_fonts/font = SubResource( 11 )
+text = "Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title Screen" type="Node2D" parent="."]
+visible = false
+position = Vector2( 0.749146, 0 )
+script = ExtResource( 23 )
+
+[node name="Background" type="TextureRect" parent="Title Screen"]
+margin_left = 317.0
+margin_top = 148.0
+margin_right = 979.0
+margin_bottom = 356.0
+texture = ExtResource( 24 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Title Screen/Background"]
+margin_left = 10.0834
+margin_top = 3.92131
+margin_right = 641.083
+margin_bottom = 205.921
+custom_fonts/font = SubResource( 10 )
+text = "Trick or Treater Pro"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play Button" type="TextureButton" parent="Title Screen"]
+margin_left = 350.442
+margin_top = 392.0
+margin_right = 650.442
+margin_bottom = 592.0
+texture_normal = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play Button Text" type="Label" parent="Title Screen/Play Button"]
+margin_left = 86.4296
+margin_top = 93.1643
+margin_right = 241.43
+margin_bottom = 172.164
+custom_fonts/font = SubResource( 11 )
+text = "Play"
+
+[node name="Exit Button" type="TextureButton" parent="Title Screen"]
+margin_left = 652.442
+margin_top = 392.0
+margin_right = 952.442
+margin_bottom = 592.0
+texture_normal = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play Button Text2" type="Label" parent="Title Screen/Exit Button"]
+margin_left = 75.5583
+margin_top = 93.1643
+margin_right = 230.558
+margin_bottom = 172.164
+custom_fonts/font = SubResource( 11 )
+text = "Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tutorial Screen" type="Node2D" parent="."]
+visible = false
+position = Vector2( 165.749, -70 )
+
+[node name="Background" type="TextureRect" parent="Tutorial Screen"]
+margin_left = -14.0
+margin_top = 171.0
+margin_right = 648.0
+margin_bottom = 640.0
+texture = ExtResource( 26 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Tutorial Screen/Background"]
+margin_left = 46.0
+margin_top = 52.0
+margin_right = 622.0
+margin_bottom = 418.0
+custom_fonts/font = SubResource( 13 )
+text = "click on the candies above
+
+drag and click to give to kids based on wish list
+
+try to not get more than 5 complaints
+
+80000 points to win"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tutorial OK Button" type="TextureButton" parent="Tutorial Screen"]
+margin_left = 702.442
+margin_top = 385.0
+margin_right = 1002.44
+margin_bottom = 585.0
+texture_normal = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play Button Text" type="Label" parent="Tutorial Screen/Tutorial OK Button"]
+margin_left = 86.4296
+margin_top = 93.1643
+margin_right = 241.43
+margin_bottom = 172.164
+custom_fonts/font = SubResource( 11 )
+text = "OK"
+align = 1
+
+[node name="Credits" type="Node2D" parent="."]
+
+[node name="Font Credit" type="Label" parent="Credits"]
+margin_left = 14.2866
+margin_top = 690.519
+margin_right = 274.287
+margin_bottom = 711.519
+custom_fonts/font = SubResource( 14 )
+text = "Dafont Baby Halloween by Projectype"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScreenTransition" type="Node2D" parent="."]
+visible = false
+
+[node name="ScreenTransition" type="ColorRect" parent="ScreenTransition"]
+margin_right = 1280.0
+margin_bottom = 720.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TransitionPlayer" type="AnimationPlayer" parent="ScreenTransition"]
+"anims/Start Game Ease In" = SubResource( 15 )
+
+[node name="AudioPlayer" parent="." instance=ExtResource( 2 )]
+[connection signal="button_up" from="Background/Candy Bags/HBoxContainer/Candy Corn Bag" to="." method="_on_Candy_Corn_Bag_button_up"]
+[connection signal="button_up" from="Background/Candy Bags/HBoxContainer/Skull Candy Bag" to="." method="_on_Skull_Candy_Bag_button_up"]
+[connection signal="button_up" from="Background/Candy Bags/HBoxContainer/Heart Pop Bag" to="." method="_on_Heart_Pop_Bag_button_up"]
+[connection signal="button_up" from="Background/Candy Bags/HBoxContainer/ChocoBar Bag" to="." method="_on_ChocoBar_Bag_button_up"]
+[connection signal="button_up" from="Background/Candy Bags/HBoxContainer/Bone Pixie Dust Bag" to="." method="_on_Bone_Pixie_Dust_Bag_button_up"]
+[connection signal="button_up" from="Background/Candy Bags/HBoxContainer/Web Pie Bag" to="." method="_on_Web_Pie_Bag_button_up"]
+[connection signal="timeout" from="Timers/Main Timer" to="." method="_on_Main_Timer_timeout"]
+[connection signal="timeout" from="Timers/KidSpawnerTimer" to="." method="_on_KidSpawnerTimer_timeout"]
+[connection signal="button_up" from="Game Over Screen/Game Over Screen/Restart Button" to="." method="_on_Restart_Button_button_up"]
+[connection signal="button_up" from="Game Over Screen/Game Over Screen/Game Over Exit Button" to="." method="_on_Game_Over_Exit_Button_button_up"]
+[connection signal="button_up" from="Win Screen/Win Screen/Win Restart Button" to="." method="_on_Win_Restart_Button_button_up"]
+[connection signal="button_up" from="Win Screen/Win Screen/Win Exit Button" to="." method="_on_Win_Exit_Button_button_up"]
+[connection signal="button_up" from="Win Screen2/Win Screen/Awesome Win Restart Button" to="." method="_on_Awesome_Win_Restart_Button_button_up"]
+[connection signal="button_up" from="Win Screen2/Win Screen/Awesome Win Exit Button" to="." method="_on_Awesome_Win_Exit_Button_button_up"]
+[connection signal="button_up" from="Title Screen/Play Button" to="." method="_on_Play_Button_button_up"]
+[connection signal="mouse_entered" from="Title Screen/Play Button" to="Title Screen" method="_on_Play_Button_mouse_entered"]
+[connection signal="mouse_exited" from="Title Screen/Play Button" to="Title Screen" method="_on_Play_Button_mouse_exited"]
+[connection signal="button_up" from="Title Screen/Exit Button" to="." method="_on_Exit_Button_button_up"]
+[connection signal="mouse_entered" from="Title Screen/Exit Button" to="Title Screen" method="_on_Exit_Button_mouse_entered"]
+[connection signal="mouse_exited" from="Title Screen/Exit Button" to="Title Screen" method="_on_Exit_Button_mouse_exited"]
+[connection signal="button_up" from="Tutorial Screen/Tutorial OK Button" to="." method="_on_Tutorial_OK_Button_button_up"]
+[connection signal="mouse_entered" from="Tutorial Screen/Tutorial OK Button" to="Tutorial Screen" method="_on_Play_Button_mouse_entered"]
+[connection signal="mouse_exited" from="Tutorial Screen/Tutorial OK Button" to="Tutorial Screen" method="_on_Play_Button_mouse_exited"]

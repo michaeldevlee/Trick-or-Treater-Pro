@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Evil Laugh SFX.ogg-59f1e3aacd7634caf02b9716df505e9c.oggstr"
+
+[deps]
+
+source_file="res://Audio/SFX/Evil Laugh SFX.ogg"
+dest_files=[ "res://.import/Evil Laugh SFX.ogg-59f1e3aacd7634caf02b9716df505e9c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

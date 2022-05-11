@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Right Candy SFX.ogg-2cc610676c0ede49350fc4fac9c000f2.oggstr"
+
+[deps]
+
+source_file="res://Audio/SFX/Right Candy SFX.ogg"
+dest_files=[ "res://.import/Right Candy SFX.ogg-2cc610676c0ede49350fc4fac9c000f2.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

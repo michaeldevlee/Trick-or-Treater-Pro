@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Kid Sprite.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Character Assets/Skull Kid/Skull Kid Head.png" type="Texture" id=2]
+[ext_resource path="res://Character Assets/Eyes.png" type="Texture" id=3]
+[ext_resource path="res://Character Assets/Skull Kid/Skull Kid Smile.png" type="Texture" id=4]
+[ext_resource path="res://Character Assets/Skull Kid/Skull Kid Foot.png" type="Texture" id=5]
+[ext_resource path="res://Character Assets/Skull Kid/Skull Kid Arm.png" type="Texture" id=6]
+[ext_resource path="res://Character Assets/Skull Kid/Skull Kid Body.png" type="Texture" id=7]
+
+[node name="Kid Sprite" instance=ExtResource( 1 )]
+position = Vector2( 0, -81.1434 )
+
+[node name="Shadow" parent="." index="0"]
+position = Vector2( -1.33484, 103.575 )
+
+[node name="Head" parent="Head" index="0"]
+position = Vector2( 0, -25.702 )
+texture = ExtResource( 2 )
+
+[node name="Eyes" parent="Head/Head" index="0"]
+position = Vector2( -20.9862, -4.14756 )
+texture = ExtResource( 3 )
+
+[node name="Mouth" parent="Head/Head" index="1"]
+position = Vector2( -32.1798, 49.033 )
+texture = ExtResource( 4 )
+
+[node name="Body2" parent="." index="2"]
+position = Vector2( -0.353546, 19.9236 )
+
+[node name="Right Arm" parent="Body2" index="0"]
+position = Vector2( -13.5413, 34.7938 )
+texture = ExtResource( 6 )
+
+[node name="Left Foot" parent="Body2" index="1"]
+position = Vector2( 10.1424, 73.996 )
+texture = ExtResource( 5 )
+
+[node name="Right Foot" parent="Body2" index="2"]
+position = Vector2( -15.8971, 80.5484 )
+texture = ExtResource( 5 )
+
+[node name="Body" parent="Body2" index="3"]
+position = Vector2( -0.513648, 38.3936 )
+texture = ExtResource( 7 )
+
+[node name="Left Arm" parent="Body2/Body" index="0"]
+position = Vector2( 26.5754, -4.08641 )
+texture = ExtResource( 6 )

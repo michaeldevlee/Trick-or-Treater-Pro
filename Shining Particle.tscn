@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Background Assets/Shining Circle.png" type="Texture" id=1]
+[ext_resource path="res://Shining Particle.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Particle Shine"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 0.5, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0.516715, 0.516715 ), Vector2( 0.420948, 0.420948 ), Vector2( 0.362421, 0.362421 ), Vector2( 0.420948, 0.420948 ), Vector2( 0.516715, 0.516715 ) ]
+}
+
+[node name="Shining Particle" type="Sprite"]
+position = Vector2( 888.997, 183.015 )
+scale = Vector2( 0.516715, 0.516715 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="ParticleShineAnim" type="AnimationPlayer" parent="."]
+"anims/Particle Shine" = SubResource( 1 )

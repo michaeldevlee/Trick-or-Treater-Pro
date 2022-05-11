@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Kid Sprite.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Character Assets/Ghost Kid/Ghost Kid Body.png" type="Texture" id=2]
+[ext_resource path="res://Character Assets/Eyes.png" type="Texture" id=3]
+[ext_resource path="res://Character Assets/Ghost Kid/Ghost Kid Mouth.png" type="Texture" id=4]
+[ext_resource path="res://Character Assets/Ghost Kid/Ghost Kid Foot.png" type="Texture" id=5]
+
+[node name="Kid Sprite" instance=ExtResource( 1 )]
+position = Vector2( 0, -72.1434 )
+
+[node name="Shadow" parent="." index="0"]
+position = Vector2( -1.33484, 106.402 )
+
+[node name="Head" parent="." index="1"]
+position = Vector2( 0, 50.6434 )
+
+[node name="Head" parent="Head" index="0"]
+position = Vector2( 0, -25.3306 )
+texture = ExtResource( 2 )
+
+[node name="Eyes" parent="Head/Head" index="0"]
+position = Vector2( -21.9862, -55.1476 )
+texture = ExtResource( 3 )
+
+[node name="Mouth" parent="Head/Head" index="1"]
+position = Vector2( -25.5906, -7.0914 )
+texture = ExtResource( 4 )
+
+[node name="Right Arm" parent="Body2" index="0"]
+position = Vector2( -13.5413, 34.0665 )
+
+[node name="Left Foot" parent="Body2" index="1"]
+position = Vector2( 10.1424, 77.5564 )
+texture = ExtResource( 5 )
+
+[node name="Right Foot" parent="Body2" index="2"]
+position = Vector2( -15.8971, 77.0154 )
+texture = ExtResource( 5 )
+
+[node name="Body" parent="Body2" index="3"]
+position = Vector2( -0.201948, 37.4585 )
+
+[node name="Left Arm" parent="Body2/Body" index="0"]
+position = Vector2( 26.7078, -2.89525 )

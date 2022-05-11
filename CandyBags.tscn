@@ -1,0 +1,100 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Button Pressed.png" type="Texture" id=3]
+
+[node name="Candy Bags" type="Node2D"]
+
+[node name="CandyBags" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 72.0
+mouse_filter = 2
+color = Color( 0.517647, 1, 0.435294, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_top = 4.0
+margin_right = 1280.0
+margin_bottom = 68.0
+grow_vertical = 2
+mouse_filter = 2
+custom_constants/separation = 80
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Candy Corn Bag" type="TextureButton" parent="HBoxContainer"]
+margin_left = 248.0
+margin_right = 312.0
+margin_bottom = 64.0
+mouse_filter = 1
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Skull Candy Bag" type="TextureButton" parent="HBoxContainer"]
+margin_left = 392.0
+margin_right = 456.0
+margin_bottom = 64.0
+mouse_filter = 1
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Heart Pop Bag" type="TextureButton" parent="HBoxContainer"]
+margin_left = 536.0
+margin_right = 600.0
+margin_bottom = 64.0
+mouse_filter = 1
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChocoBar Bag" type="TextureButton" parent="HBoxContainer"]
+margin_left = 680.0
+margin_right = 744.0
+margin_bottom = 64.0
+mouse_filter = 1
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bone Pixie Dust Bag" type="TextureButton" parent="HBoxContainer"]
+margin_left = 824.0
+margin_right = 888.0
+margin_bottom = 64.0
+mouse_filter = 1
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Web Pie Bag" type="TextureButton" parent="HBoxContainer"]
+margin_left = 968.0
+margin_right = 1032.0
+margin_bottom = 64.0
+mouse_filter = 1
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="HBoxContainer/Candy Corn Bag" to="." method="_on_Candy_Corn_Bag_button_up" binds= [ "candyName" ]]
+[connection signal="button_up" from="HBoxContainer/Skull Candy Bag" to="." method="_on_Skull_Candy_Bag_button_up"]
+[connection signal="button_up" from="HBoxContainer/Heart Pop Bag" to="." method="_on_Heart_Pop_Bag_button_up"]
+[connection signal="button_up" from="HBoxContainer/ChocoBar Bag" to="." method="_on_ChocoBar_Bag_button_up"]
+[connection signal="button_up" from="HBoxContainer/Bone Pixie Dust Bag" to="." method="_on_Bone_Pixie_Dust_Bag_button_up"]
+[connection signal="button_up" from="HBoxContainer/Web Pie Bag" to="." method="_on_Web_Pie_Bag_button_up"]
